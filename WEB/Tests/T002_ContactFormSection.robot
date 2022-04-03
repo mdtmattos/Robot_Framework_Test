@@ -4,7 +4,7 @@ Test Setup       Open
 Test Teardown    Close
 
 *** Test Cases ***
-Scenario: Validate Field
+Scenario: Validate Fields
     Given I navigate to Contact us page
     When I access the page
     Then I assert all fields on the contact form
