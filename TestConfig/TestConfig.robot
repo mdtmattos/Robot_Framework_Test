@@ -1,9 +1,10 @@
 *** Settings ***
 Library          SeleniumLibrary
-Library          DatabaseLibrary
 
 # Controllers
 Resource         ../WEB/Controller/C001_ProductSearch_Controller.robot
+Resource         ../WEB/Controller/C002_ContactFormSection_Controller.robot   
+Resource         ../WEB/Controller/C003_AddToCart_Controller.robot
 
 # PageObjects
 Resource         ../PageObjects/ProductSearch_Page.robot
@@ -16,7 +17,7 @@ ${Options}    add_argument("--no-sandbox");add_argument("--disable-dev-shm-usage
 *** Keywords ***
 Open
     Open Browser        ${URL}      ${Browser}
-    Maximize Browser Window
+    Set Window Size     ${1200}     ${1200}
     Set Selenium Speed              1 seconds
     Set Selenium Implicit Wait      15s
 
